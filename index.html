@@ -11,18 +11,15 @@
 	<body>
 		<div class="default center">Time Incremental 2 (v 0.0.1)</div>
 		<div id="app">
-			<div id="tabs">
-				<tab-buttons :tabs="tabs"></tab-buttons>
-			</div>
-			<div id="default" class="small" style="text-align: center;">
+			<tab-navigation  ref="tabNavigation"></tab-navigation>
+			<div v-if="settings.tab === 'default'" class="small center">
 				Your Time: {{time}} (+{{timePerSecond}}/s)
 				<upgrade-table :upgrades="upgrades"></upgrade-table>
 			</div>
-			<div id="updatelogs">
+			<div v-if="settings.tab === 'updatelogs'">
 				<div class="big center">Update Logs:</div>
-				<div class="default center">v 0.0.1 - 12/07/24</div>
-				<div class="small center">Hi!</div>
-				<div class="tiny">Welcome to Time Incremental 2, as Time Incremental from Replit has outdated, we will feature more!</div>
+				<div class="default center">v 0.0.1 - 12/06/24</div>
+				<div class="tiny center">Welcome to Time Incremental 2, as Time Incremental from Replit has outdated, we will feature more!</div>
 			</div>
 		</div>
 
@@ -32,14 +29,11 @@
 		<script src="js/game/functions.js"></script>
 		<script src="js/game/game.js"></script>
 		<script src="js/break_eternity.js"></script>
-		<script src="js/NumFormat.js"></script>
 		<script src="js/main.js"></script>
     
-		<script src="js/classes/tab.js"></script>
 		<script src="js/classes/upgrade.js"></script>
     
-		<script src="js/components/tab.js"></script>
-		<script src="js/components/tab-buttons.js"></script>
+		<script src="js/components/tab-navigation.js"></script>
 		<script src="js/components/upgrade.js"></script>
 		<script src="js/components/upgrade-table.js"></script>
     
