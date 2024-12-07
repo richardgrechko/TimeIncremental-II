@@ -6,6 +6,9 @@ var game = {
 	realityQuarks: new Decimal(0),
 	prestigePoints: new Decimal(0),
 	ascensionProducts: new Decimal(0),
+	settings: {
+		tab: "default"
+	},
 	timeUpgrades: [
 		new timeUpgrade("TU#1: Starter", new Decimal(10).pow(-32), 1.1, 1.2, 1.1),
 		new timeUpgrade("TU#2: Hastener", new Decimal(10).pow(-30), 1.2, 1.5, 1.25),
