@@ -1,4 +1,4 @@
-const functions = {
+var functions = {
 	formatTime: function(seconds)
 	{
 		let k;
